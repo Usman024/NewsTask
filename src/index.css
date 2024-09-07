@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200..800&display=swap");
+
+@layer base {
+  body {
+    @apply font-[Roboto];
+  }
+  /* In your CSS file */
+  @layer utilities {
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      /* text-overflow: ellipsis; */
+    }
+  }
+}
+.modal-width-sm {
+  @apply w-full sm:w-2/3 md:w-2/4 lg:w-2/6 xl:w-[28%];
+}
+
+.modal-width-md {
+  @apply w-full md:w-[60%];
+}
+
+.modal-width-lg {
+  @apply w-full md:w-[70%] 2xl:w-[50%];
+}
+
+.modal-width-xl {
+  @apply w-full md:w-[80%];
+}
+
+.modal-width-full {
+  @apply w-full h-screen;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hideScrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
